@@ -10,7 +10,8 @@ from routes.item_routes import item_bp
 load_dotenv()
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+app.config["MONGO_URI"] = "mongodb://localhost:27017/mydb"
+
 
 mongo = PyMongo(app)
 
